@@ -31,6 +31,13 @@ class GoogleCloudVision
         return $this->setRequestBody();
     }
 
+    public function setImageContents($content)
+    {
+        $this->image['content'] = $content;
+
+        return $this->setRequestBody();
+    }
+
     public function convertImgtoBased64($path)
     {
         $data = file_get_contents($path);
